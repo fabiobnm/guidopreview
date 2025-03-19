@@ -77,11 +77,12 @@ body {
 .gallery-image-container{
   width: 100%;
   transition: .5s;
+ 
 }
 .gallery-image-container:hover{
-  width: 302%;
-  transition: .5s;
-  z-index: 9999;
+  width: 100.5%;
+  transition: .3s;
+  z-index: 999;
 }
 /* index.css */
 .draggable-container {
@@ -206,7 +207,7 @@ display: grid;
     transition: .3s;
 }
 .imgCommission:hover{
-  height: 60.3vh;
+  height: 60.2vh;
   transition: .3s;
 }
 
@@ -560,6 +561,13 @@ list-style-type: none;
       padding-right: 1rem;
       margin-bottom: 150px;
   }
+
+  .gallery-image-container:hover{
+    width: 100%;
+    transition: .5s;
+   
+  }
+  
   .titoloDaily{
     color:black;
     padding:15px;
@@ -605,6 +613,11 @@ list-style-type: none;
         margin-left: 0px;
         width: 100%;
         padding:1rem;
+  }
+
+  .imgCommission:hover{
+    height: auto;
+    transition: .3s;
   }
   .imgCommission{
     height: auto;
