@@ -1,0 +1,671 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+::selection {
+  color: white;
+  background: var(--random-color, #ffa3d7); /* Colore di fallback */
+}
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px!important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white!important;
+  -webkit-border-radius: 0px!important;
+  border-radius: 0px!important;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px!important;
+  border-radius: 0px!important;
+  background: black!important;
+}
+
+img{
+  max-width: none;
+}
+@font-face {
+  font-family: 'MyFont';
+  src:       url('/fonts/BastardoGrotesk-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFontBold';
+  src:       url('/fonts/BastardoGrotesk-Black.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MyFontThin';
+  src:       url('/fonts/BastardoGrotesk-Thin.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  color: var(--foreground);
+  background: white;
+  font-family: 'MyFont';
+}
+
+#guidoBold{
+  font-size: 25px !important;
+  font-family: 'MyFontBold';
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+/* index.css */
+.draggable-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.draggable-box {
+  width: 200px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: move; /* Change cursor to indicate draggable item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+.imageHome {
+  user-select: none; /* Evita la selezione */
+  pointer-events: none; /* Evita interazioni con il mouse */
+  -webkit-user-drag: none; /* Disabilita il trascinamento su browser WebKit */
+}
+
+
+.commissionTextMobile{
+display: none;
+}
+.commissionTextDesktop{
+display: block;
+}
+
+
+.carosOld{
+
+  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  top: 0vH;
+  margin-left:0px;
+  display: inline-flex;
+  overflow-x: scroll;
+}
+.aboutBio{
+  width: 100%;
+  color: black;
+  margin-left: 45px;
+}
+.aboutText{
+  width: 50%;
+  color: black;
+  margin: 45px;
+}
+
+.imgAbout{
+  color: black;
+  width: 25vw;
+  height: fit-content;
+  position: relative;
+}
+
+.pAbout{
+  color: black;
+    margin-left: 30px;
+    position: relative;
+     width: 35vw
+}
+.caros{
+overflow-y: hidden;
+margin: 0;
+padding: 0;
+width: auto;
+height: auto;
+top: 0vH;
+margin-left: 0px;
+display: inline-flex;
+/* overflow-x: scroll; */
+flex-wrap: wrap;
+gap:10px;
+row-gap: 10px;
+display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+
+}
+/*
+.vociMenuHeader:hover{
+  border-bottom: 1px solid black;
+}
+  */
+.dailydoseDiv{
+ /* display: flex
+; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1vW;
+}
+.headerDesktop{
+  
+}
+.titoloDaily{
+  color:black;
+  padding:45px;
+  padding-bottom:0;
+  font-size:40px;
+  margin-bottom: 10px;
+    line-height: 1;
+}
+
+.imgCommission{
+  height: 60vh;
+    width: auto;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.sottoTitoloDaily{
+  color:black;
+  padding:45px;
+  padding-top:0;
+   font-size:30px;
+   line-height:0.3;
+   color:gray
+}
+
+.educational{
+  display: flex;
+    margin-top: 0px;
+    gap: 76px;
+    padding-left: 0;
+}
+
+.educational {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px; /* Spaziatura tra le card */
+  justify-content: center; /* Centrare le card */
+}
+.dailyLogo{
+  width:200px;
+  position:fixed;
+  top:0;
+  right:50px;
+}
+.card {
+  perspective: 1000px; /* Necessario per l'effetto 3D */
+  width: 700px; /* Larghezza della card */
+  height: 700px; /* Altezza della card */
+}
+
+.cardWorkshops{
+  perspective: 1000px; /* Necessario per l'effetto 3D */
+  width: 700px; /* Larghezza della card */
+  height: 50vH; /* Altezza della card */
+}
+
+.dailyPost{
+  height: auto;
+  margin: 0px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom:75px
+}
+
+.dailyPostImage{
+  width:90%;
+   margin-right: 20px;
+    object-fit: cover;
+     cursor: pointer;
+     max-height: 270px;
+
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  max-width: 80vW;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.carousel-image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Ruota di 180° al hover */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Nasconde il lato non attivo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-front img,
+.card-back img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Assicura che l'immagine si adatti */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Ruota il lato posteriore */
+}
+
+/* */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgb(255 255 255 / 95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-image {
+  max-height: 90vH;
+  object-fit: contain;
+}
+
+.close-btn,
+.nav-btn {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: black;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close-btn {
+  top: 20px;
+    right: 20px;
+    position: fixed;
+    color: rgb(0, 0, 0);
+    background: none;
+    z-index: 9999999;
+}
+
+.prev-btn {
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: none;
+  cursor: w-resize;}
+
+.next-btn {
+  right: 0px;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: none;
+    cursor: e-resize;
+}
+
+:focus-visible {
+  outline: none;
+}
+.headerDesktop{
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+list-style-type: none;
+    padding: 0px;
+    display: flex
+;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.headerMobile{
+  display: none;
+}
+.projectDivWork{
+  height: auto;
+    margin: 0px;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 120px;
+}
+
+.asideHeader{
+  width: 100%;
+  background-color: white;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  transition: top 0.3s ease-in-out;
+}
+.menuOpenMobile li{
+  margin-bottom: 10px;
+}
+.dailyButton{
+  width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 20px;
+    position: fixed;
+    bottom: 5%;
+    right: 0px;
+}
+.imageHome{
+  width: 45vw;
+    height: auto;
+    margin: auto;
+}
+.boxImageHome{
+  height: auto;
+    margin: 12vh 100px 0px;
+    display: flex;
+    transform: translateY(-50%);
+   
+}
+
+.divCommissions{
+    display: flex;
+    margin-top: 20vh;
+    margin-left: 45px;
+    width: fit-content;
+}
+.commissionsDiv{
+  display: flex;
+    overflow-x: scroll;
+    width: auto;
+    margin-left: 50px;
+    margin-top: 150px;
+
+}
+
+.textWorkshops{
+  color:black;
+  margin-left: 45px;
+  margin-top: 145px;
+  width: 50%;
+}
+
+.cardWorkshops {
+  perspective: 1000px; /* Effetto 3D */
+  width: 400px; /* Adatta alla dimensione dell'immagine */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.cardWorkshops:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Nasconde il lato posteriore quando non è girato */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Parte girata di default */
+}
+
+
+/* Media query per smartphone (max-width 768px)  ////////////////////////////////////////////////////////////////////////
+ //////////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////
+ 
+ */
+@media only screen and (max-width: 768px) {
+  .headerMobile{
+    display: block;
+  }
+  .boxImageHome{
+      display: block;
+  }
+  .imgAbout{
+    color: black;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .projectDivWork{
+    height: auto;
+      margin: 0px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-bottom: 150px;
+  }
+  .titoloDaily{
+    color:black;
+    padding:15px;
+    padding-top: 150px;
+    padding-bottom:0;
+    font-size:40px;
+    line-height: 1;
+  }
+  .imageHome{
+    width: 80vW;
+  }
+
+  .commissionsDiv{
+    display: block;
+      overflow-x: scroll;
+      width: auto;
+      margin-left: 0px;
+      margin-top: 150px;
+  }
+  .aboutBio{
+    width: 100%;
+    color: black;
+    margin-left: 0px;
+  }
+  .aboutText{
+    width: 100%;
+    color: black;
+    padding: 1rem;
+    margin: 0;
+
+  }
+  .pAbout{
+    color: black;
+      margin-left: 0px;
+      margin-top: 30px;
+      position: relative;
+       width: auto
+  }
+  .divCommissions{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10vh;
+        margin-left: 0px;
+        width: 100%;
+        padding:1rem;
+  }
+  .imgCommission{
+    height: auto;
+      width: 100%;
+      object-fit: cover;
+      margin-right: 0px;
+  }
+.asideHeader{
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+ 
+}
+
+.commissionTextMobile{
+  display: block;
+  }
+  .commissionTextDesktop{
+  display: none;
+  }
+  
+.dailyButton{
+  width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 20px;
+    position: fixed;
+    bottom: 1rem;
+    right: 0px;
+}
+
+.caros{
+  
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  
+  }
+
+  .dailydoseDiv{
+    display: block;
+    gap: 15px;
+  }
+
+  .sottoTitoloDaily{
+    color:black;
+    padding:15px;
+    padding-top:0;
+     font-size:30px;
+     line-height:1;
+     color:gray
+  }
+  .dailyLogo{
+    width:120px;
+    position:fixed;
+    top:0;
+    right:15px;
+  }
+  .dailyPost{
+    height: auto;
+    margin: 0px;
+    padding-left: 3vW;
+    padding-right: 0;
+    padding-bottom:75px
+  }
+
+  .dailyPostImage{
+    width: 94vW;
+    margin-bottom: 15px;
+    height: auto;
+      object-fit: cover;
+       cursor: pointer;
+  }
+  .headerDesktop{
+    
+  display: none;
+  }
+  
+}
