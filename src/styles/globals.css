@@ -74,7 +74,15 @@ body {
   }
 }
 
-
+.gallery-image-container{
+  width: 100%;
+  transition: .5s;
+}
+.gallery-image-container:hover{
+  width: 302%;
+  transition: .5s;
+  z-index: 9999;
+}
 /* index.css */
 .draggable-container {
   text-align: center;
@@ -195,7 +203,13 @@ display: grid;
     width: auto;
     object-fit: cover;
     margin-right: 15px;
+    transition: .3s;
 }
+.imgCommission:hover{
+  height: 61vh;
+  transition: .3s;
+}
+
 .sottoTitoloDaily{
   color:black;
   padding:45px;

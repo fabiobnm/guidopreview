@@ -83,7 +83,6 @@ export default function Home() {
                 key={index}
                 className="gallery-image-container"
                 style={{
-                  width: '100%',
                   height: 'auto',
                   overflow: 'hidden',
                   margin: 'auto',
