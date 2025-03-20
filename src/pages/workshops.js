@@ -2,8 +2,7 @@ import { useQuery } from '@apollo/client';
 import client from '../lib/apolloClient';
 import { GET_POSTSEducNew } from '../lib/queries';
 import Sidebar from '../components/Sidebar'; 
-import NewsButt from '../components/tastoNews';
-
+import { useState } from 'react';
 
 export default function Home() {
   const { loading, error, data } = useQuery(GET_POSTSEducNew, { client });
@@ -21,39 +20,32 @@ export default function Home() {
 
   return (
     <main>
-    <div className='textWorkshops'  dangerouslySetInnerHTML={{ __html: data.workshops[0].text.html }}></div>
+      <div className='textWorkshops' dangerouslySetInnerHTML={{ __html: data.workshops[0].text.html }}></div>
+      
       <div className="educational">
-        
-        {data.workshops[0].educational.map((progetto) => (
-         
-          
-          <div className="cardWorkshops" key={progetto.id}>
-  <div className="card-inner">
-    {/* Lato frontale */}
-    <div className="card-front">
-      <img 
-        style={{  width: '100%' }} 
-        src={progetto.copertina.url} 
-        alt={progetto.nome} 
-      />
-    </div>
-    
-    {/* Lato posteriore */}
-    <div className="card-back">
-      <img 
-        style={{ height: '400px', width: '100%' }} 
-        src={progetto.retro.url} 
-        alt={`${progetto.nome} Retro`} 
-      />
-    </div>
-  </div>
-</div>
-          
+        {data.workshops[0].educational.map((progetto, index) => (
+          <ImageHover key={index} progetto={progetto} />
         ))}
-
       </div>
       
       <Sidebar />
     </main>
   );
 }
+
+// Componente separato per la gestione dell'hover
+const ImageHover = ({ progetto }) => {
+  const [imageSrc, setImageSrc] = useState(progetto.copertina.url);
+
+  return (
+    <div>
+      <img 
+        style={{ height: '48vH',maxWidth:'30vW', margin: 'auto', transition: 'opacity 0.3s ease-in-out' }} 
+        src={imageSrc} 
+        alt={progetto.nome}
+        onMouseEnter={() => setImageSrc(progetto.retro.url)}  // Cambia immagine all'hover
+        onMouseLeave={() => setImageSrc(progetto.copertina.url)} // Ritorna all'immagine originale
+      />
+    </div>
+  );
+};

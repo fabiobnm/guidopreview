@@ -10,14 +10,24 @@ const Sidebar = () => {
   const [hoverText2, setHoverText2] = useState("Workshop"); // Stato per gestire il testo
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Stato per il menu mobile
 
+
   function getRandomColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
   }
 
-   // Imposta il colore random solo al primo montaggio
-   useEffect(() => {
+  useEffect(() => {
+    // Imposta un colore iniziale
     document.documentElement.style.setProperty('--random-color', getRandomColor());
+
+    // Cambia colore ogni 5 secondi
+    const interval = setInterval(() => {
+      document.documentElement.style.setProperty('--random-color', getRandomColor());
+    }, 10000);
+
+    // Cleanup quando il componente si smonta
+    return () => clearInterval(interval);
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;

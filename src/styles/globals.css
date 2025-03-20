@@ -15,7 +15,8 @@
 }
 ::selection {
   color: white;
-  background: var(--random-color, #ffa3d7); /* Colore di fallback */
+  background: var(--random-color, #cbffa3); /* Colore di fallback */
+  
 }
 
 
@@ -222,14 +223,14 @@ display: grid;
 
 .educational{
   display: flex;
-    margin-top: 0px;
+    margin-top: 50px;
     gap: 76px;
     padding-left: 0;
 }
 
 .educational {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px; /* Spaziatura tra le card */
   justify-content: center; /* Centrare le card */
 }
