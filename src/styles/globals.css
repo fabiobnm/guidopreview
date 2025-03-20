@@ -200,14 +200,14 @@ display: grid;
 }
 
 .imgCommission{
-  height: 60vh;
+  height: 65vh;
     width: auto;
     object-fit: cover;
     margin-right: 15px;
     transition: .3s;
 }
 .imgCommission:hover{
-  height: 60.2vh;
+  height: 65.2vh;
   transition: .3s;
 }
 

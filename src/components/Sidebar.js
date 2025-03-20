@@ -52,7 +52,7 @@ const Sidebar = () => {
         {/* Guido Borso a sinistra */}
         <li style={styles.left}>
           <Link className='vociMenuHeader' id='guidoBold' href="/" style={router.pathname === '/' ? styles.linkHome : styles.linkHome}>
-            <img style={{width:'80px'}} src='https://guidoborso.com/new/img/GuidoBorso.png'/>
+            <img style={{width:'80px'}} src='./GuidoBorsologo.png'/>
           </Link>
         </li>
 
