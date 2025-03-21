@@ -67,7 +67,7 @@ export default function Home() {
             <div
               className="commissionTextMobile"
               style={{ color: 'black', margin: '25px', marginBottom: '100px' }}
-              dangerouslySetInnerHTML={{ __html: commissions.infoWork?.html }}
+              dangerouslySetInnerHTML={{ __html: commissions.text }}
             ></div>
           </div>
         ))}
