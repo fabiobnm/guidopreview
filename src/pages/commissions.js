@@ -29,7 +29,6 @@ console.log('cicici'+ data.commissions[0].infoWork.html);
                 src={commissions.immagine.url}              
                 onMouseEnter={() => setHoverText(commissions.infoWork?.html)} // Cambia il testo quando passi sopra
                 onMouseLeave={() => setHoverText(" ")} // Ripristina il testo originale quando esci
-            
             />
            
            <div className='commissionTextMobile' style={{ color:'black',margin:'25px', marginBottom: '100px'}} dangerouslySetInnerHTML={{ __html: commissions.infoWork?.html }}></div>
