@@ -92,6 +92,16 @@ body {
   padding: 20px;
 }
 
+.imgWorkshop{
+  height: 48vh;
+    max-width: 30vw;
+    padding-inline: 0rem;
+
+    object-fit: contain;
+    margin: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
 .draggable-box {
   width: 200px;
   height: 100px;
@@ -600,8 +610,17 @@ list-style-type: none;
     color: black;
     padding: 1rem;
     margin: 0;
-
   }
+
+  .imgWorkshop {
+    height: max-content;
+    width: 100vW;
+    padding-inline: 1rem;
+    max-width: max-content;
+    object-fit: contain;
+    margin: auto;
+    transition: opacity 0.3s ease-in-out;
+}
   .pAbout{
     color: black;
       margin-left: 0px;
@@ -650,6 +669,24 @@ list-style-type: none;
     position: fixed;
     bottom: 1rem;
     right: 0px;
+}
+
+.textWorkshops {
+  color: black;
+  margin-left: 1rem;
+  margin-top: 145px;
+  width: 85%;
+}
+
+.educational {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-content: center;
 }
 
 .caros{

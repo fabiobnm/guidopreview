@@ -111,12 +111,11 @@ const Sidebar = () => {
 
       <div className="headerMobile">
         <Link href="/"  id='guidoBold' style={styles.linkHome}>GUIDO BORSO</Link>
-        
-
+      
         {/* Bottone per aprire/chiudere il menu */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          style={{color:'black'}}
+          style={{color:'black', fontSize:'29px'}}
         >
           {isMobileMenuOpen ? '-' : '+'}
         </button>
@@ -126,24 +125,24 @@ const Sidebar = () => {
           <ul className="menuOpenMobile" style={styles.mobileMenu}>
             <li >
               
-              <Link  style={{color:'black',fontSize:'20px'}} href="/works">Works</Link>
+              <Link  style={{color:'black',fontSize:'18px'}} href="/works">Works</Link>
             </li>
             <li>
-              <Link  style={{color:'black',fontSize:'20px'}} href="/commissions" >Commissions</Link>
+              <Link  style={{color:'black',fontSize:'18px'}} href="/commissions" >Commissions</Link>
             </li>
            
             <li style={{marginBottom:'20px'}}>
              
-              <Link  style={{color:'black',fontSize:'20px'}} href="/workshops" >Workshop</Link>
+              <Link  style={{color:'black',fontSize:'18px'}} href="/workshops" >Workshop</Link>
             </li>
 
             <li>
              
-             <Link  style={{color:'black',fontSize:'20px'}} href="" ></Link>
+             <Link  style={{color:'black',fontSize:'18px'}} href="" ></Link>
            </li>
             <li>
              
-             <Link  style={{color:'black',fontSize:'20px'}} href="/about" >about</Link>
+             <Link  style={{color:'black',fontSize:'18px'}} href="/about" >about</Link>
            </li>
            
           </ul>

@@ -111,6 +111,7 @@ export default function Home() {
       {/* Modal con animazione */}
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
+          <p className='guidoBold' style={{color:'black',position:'fixed', top:'30px', right:'45px', fontFamily:'MyFontBold', cursor:'pointer'}}>X</p>
           <animated.div
             style={modalAnimation}
             className="modal-content"

@@ -39,8 +39,7 @@ const ImageHover = ({ progetto }) => {
 
   return (
     <div>
-      <img 
-        style={{ height: '48vH',maxWidth:'30vW', objectFit:'contain', margin: 'auto', transition: 'opacity 0.3s ease-in-out' }} 
+      <img className='imgWorkshop'
         src={imageSrc} 
         alt={progetto.nome}
         onMouseEnter={() => setImageSrc(progetto.retro.url)}  // Cambia immagine all'hover
