@@ -31,7 +31,7 @@ export default function Home() {
               style={{
               position: 'fixed',
               marginTop: `${(index) *60}px`,
-              right: `${(index +1) * 60}px`,
+              right: `${(index +1) * 10}%`,
               zIndex: index, // Usa l'indice iniziale
               transition: 'z-index 0.2s ease-in-out',
               cursor: 'pointer',
@@ -47,8 +47,6 @@ export default function Home() {
           </Draggable>
         ))}
       </div>
-
-      <img style={{ zIndex: 99, width: '110px', position: 'fixed', bottom: 0, left: '-50px' }} src='TARTA.png' />
 
       <Sidebar />
     </main>

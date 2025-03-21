@@ -66,7 +66,6 @@ body {
 }
 
 #guidoBold{
-  font-size: 25px !important;
   font-family: 'MyFontBold';
 }
 @layer utilities {
@@ -201,14 +200,14 @@ display: grid;
 }
 
 .imgCommission{
-  height: 65vh;
+  height: 70vh;
     width: auto;
     object-fit: cover;
     margin-right: 15px;
     transition: .3s;
 }
 .imgCommission:hover{
-  height: 65.2vh;
+  height: 70.2vh;
   transition: .3s;
 }
 
@@ -454,8 +453,8 @@ list-style-type: none;
   background-color: white;
   padding-left: 45px;
   padding-right: 45px;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 20pX;
+  padding-bottom: 10px;
   position: fixed;
   top: 0px;
   z-index: 10;

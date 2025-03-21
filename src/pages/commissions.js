@@ -38,7 +38,7 @@ console.log('cicici'+ data.commissions[0].infoWork.html);
       ))}
      
       </div>
-      <div className='commissionTextDesktop'  style={{width:'50%', color:'black',margin:'45px'}} dangerouslySetInnerHTML={{ __html: hoverText }}></div>
+      <div className='commissionTextDesktop'  style={{width:'50%', color:'black',marginLeft:'45px', marginTop:'20px'}} dangerouslySetInnerHTML={{ __html: hoverText }}></div>
 
       <Sidebar />
     </main>

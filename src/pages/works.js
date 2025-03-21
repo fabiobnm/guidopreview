@@ -4,6 +4,7 @@ import client from '../lib/apolloClient';
 import { GET_POSTS, GET_POSTSOrdine } from '../lib/queries';
 import Sidebar from '../components/Sidebar';
 import { useSpring, animated } from '@react-spring/web';
+import Image from 'next/image';
 
 export default function Home() {
   const { loading, error, data } = useQuery(GET_POSTSOrdine, { client });
@@ -91,6 +92,7 @@ export default function Home() {
                 }}
                 onClick={() => openModal(progetto.galleria, index)}
               >
+                
                 <img
                   src={image.url}
                   alt={`${progetto.nome} galleria ${index}`}
