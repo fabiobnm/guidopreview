@@ -44,15 +44,15 @@ export default function Home() {
 
       <div style={{ display: 'flex', flexDirection: 'column', margin:'45px'}}>
         <p style={{color:'black',fontWeight: 'bolder'}}>Fanzines:</p>
-        {tourData.map((tour) => (
+        {data.abouts[0].fanzine.map((tour) => (
           <p
             key={tour.id}
-            onMouseEnter={() => setHoveredImage(tour.imgSrc)}
+            onMouseEnter={() => setHoveredImage(tour.img?.url)}
             onMouseLeave={() => setHoveredImage(null)}
             onMouseMove={handleMouseMove}
             style={{ cursor: 'pointer', margin: '0px' , marginTop:'1px', color:'black', width: 'fit-content'}} // Aggiunge margine tra i <p>
           >
-            {tour.title}
+            {tour.text}
           </p>
         ))}
 

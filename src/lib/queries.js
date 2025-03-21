@@ -67,6 +67,10 @@ query {
     immagine{
       url
     }
+    fanzine{
+      text
+      img{url}
+    }
   }
 }
 `;
