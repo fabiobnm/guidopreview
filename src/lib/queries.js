@@ -67,7 +67,7 @@ query {
     immagine{
       url
     }
-    fanzine{
+    fanzine(first:100){
       text
       img{url}
     }
