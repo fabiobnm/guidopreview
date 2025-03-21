@@ -40,6 +40,20 @@ query {
   }
 `;
 
+export const GET_POSTSOrderComm = gql`
+
+{
+  commission(where: {id: "cm8ix58nt52al08mhrhprxuen"}) {
+    commission(first: 200){
+      img{url}
+      text
+      
+    }
+  }
+}
+`;
+
+
 
 
 
