@@ -120,7 +120,10 @@ body {
   pointer-events: none; /* Evita interazioni con il mouse */
   -webkit-user-drag: none; /* Disabilita il trascinamento su browser WebKit */
 }
-
+.imgCommission{
+  user-select: none; /* Evita la selezione */
+  -webkit-user-drag: none; /* Disabilita il trascinamento su browser WebKit */
+}
 
 .commissionTextMobile{
 display: none;
