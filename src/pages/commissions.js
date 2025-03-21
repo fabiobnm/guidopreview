@@ -32,7 +32,7 @@ console.log('cicici'+ data.commissions[0].infoWork.html);
             
             />
            
-           <div className='commissionTextMobile' style={{width:'50%', color:'black',margin:'25px', marginBottom: '100px'}} dangerouslySetInnerHTML={{ __html: commissions.infoWork?.html }}></div>
+           <div className='commissionTextMobile' style={{ color:'black',margin:'25px', marginBottom: '100px'}} dangerouslySetInnerHTML={{ __html: commissions.infoWork?.html }}></div>
         
         </div>
       ))}

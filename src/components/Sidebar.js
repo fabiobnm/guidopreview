@@ -110,7 +110,7 @@ const Sidebar = () => {
       </ul>
 
       <div className="headerMobile">
-        <Link href="/" style={styles.linkHome}>Guido Borso</Link>
+        <Link href="/"  id='guidoBold' style={styles.linkHome}>GUIDO BORSO</Link>
         
 
         {/* Bottone per aprire/chiudere il menu */}
