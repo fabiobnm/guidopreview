@@ -105,7 +105,7 @@ export default function Home() {
 
 {progetto.video.map((video, index) => (
              <div
-             key={index}
+             key={index+progetto.galleria.length}
              className="gallery-image-container"
              style={{
                height: 'auto',
@@ -126,7 +126,7 @@ export default function Home() {
                width={200}
                height={200}
                src={video.thumbnail?.url}
-               alt={`${progetto.nome} galleria ${index}`}
+               alt={`${progetto.nome} galleria ${index+progetto.galleria.length}`}
                style={{ width: '100%', objectFit: 'cover' }}
              />
            </div>
@@ -142,7 +142,6 @@ export default function Home() {
       {/* Modal con animazione */}
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
-          <p className='guidoBold' style={{color:'black',position:'fixed', top:'30px', right:'45px', fontFamily:'MyFontBold', cursor:'pointer'}}>X</p>
           <animated.div
             style={modalAnimation}
             className="modal-content"
