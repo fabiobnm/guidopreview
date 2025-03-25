@@ -102,6 +102,13 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
+.divBookZine{
+  display: flex;
+  flex-direction: column;
+  margin: 45px;
+  
+}
+
 .draggable-box {
   width: 200px;
   height: 100px;
@@ -631,6 +638,14 @@ list-style-type: none;
       position: relative;
        width: auto
   }
+
+  .divBookZine{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    
+  }
+  
   .divCommissions{
         display: flex;
         flex-direction: column;
