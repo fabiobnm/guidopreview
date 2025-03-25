@@ -42,7 +42,41 @@ export default function Home() {
       </div>
       <div className="aboutText" dangerouslySetInnerHTML={{ __html: data.abouts[0].cv.html }}></div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', margin:'45px'}}>
+
+      <div style={{ display: 'flex', flexDirection: 'column', margin:'45px'}}>       
+        <p style={{color:'black',fontWeight: 'bolder'}}>Books:</p>
+        {data.abouts[0].books.map((tour) => (
+          <p
+            key={tour.id}
+            onMouseEnter={() => setHoveredImage(tour.img?.url)}
+            onMouseLeave={() => setHoveredImage(null)}
+            onMouseMove={handleMouseMove}
+            style={{ cursor: 'pointer', margin: '0px' , marginTop:'1px', color:'black', width: 'fit-content'}} // Aggiunge margine tra i <p>
+          >
+            {tour.text}
+          </p>
+        ))}
+
+        {hoveredImage && (
+          <img
+            src={hoveredImage}
+            style={{
+              position: 'fixed',
+              top: `${position.y}px`,
+              left: `${position.x}px`,
+              width: '300px',
+              padding: '5px',
+              pointerEvents: 'none', // Evita che l'immagine interferisca con il mouse
+           
+            }}
+          />
+        )}
+      </div>
+
+
+
+
+      <div style={{ display: 'flex', flexDirection: 'column', margin:'45px'}}>       
         <p style={{color:'black',fontWeight: 'bolder'}}>Fanzines:</p>
         {data.abouts[0].fanzine.map((tour) => (
           <p

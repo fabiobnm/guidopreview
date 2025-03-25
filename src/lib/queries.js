@@ -75,6 +75,10 @@ query {
       text
       img{url}
     }
+    books(first:100){
+      text
+      img{url}
+    }
   }
 }
 `;
