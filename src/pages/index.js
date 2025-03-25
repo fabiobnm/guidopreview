@@ -31,7 +31,7 @@ export default function Home() {
               style={{
               position: 'fixed',
               marginTop: `${(index) *30}px`,
-              right: `${(index +1) * 70}px`,
+              right: `${(index +1) * 50}px`,
               zIndex: index, // Usa l'indice iniziale
               transition: 'z-index 0.2s ease-in-out',
               cursor: 'pointer',
