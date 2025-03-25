@@ -125,15 +125,15 @@ const Sidebar = () => {
           <ul className="menuOpenMobile" style={styles.mobileMenu}>
             <li >
               
-              <Link  style={{color:'black',fontSize:'18px'}} href="/works">Works</Link>
+              <Link  style={router.pathname === "/works" ? styles.linkMobileActive : styles.linkMobile} href="/works">Works</Link>
             </li>
             <li>
-              <Link  style={{color:'black',fontSize:'18px'}} href="/commissions" >Commissions</Link>
+              <Link  style={router.pathname === "/commissions" ? styles.linkMobileActive : styles.linkMobile}  href="/commissions" >Commissions</Link>
             </li>
            
             <li style={{marginBottom:'20px'}}>
              
-              <Link  style={{color:'black',fontSize:'18px'}} href="/workshops" >Workshop</Link>
+              <Link   style={router.pathname === "/workshops" ? styles.linkMobileActive : styles.linkMobile}  href="/workshops" >Workshops</Link>
             </li>
 
             <li>
@@ -142,7 +142,7 @@ const Sidebar = () => {
            </li>
             <li>
              
-             <Link  style={{color:'black',fontSize:'18px'}} href="/about" >about</Link>
+             <Link   style={router.pathname === "/about" ? styles.linkMobileActive : styles.linkMobile}  href="/about" >about</Link>
            </li>
            
           </ul>
@@ -153,6 +153,16 @@ const Sidebar = () => {
 };
 
 const styles = {
+  linkMobile:{
+    color:'black',
+    fontSize:'18px'
+  },
+  linkMobileActive:{
+    color:'black',
+    fontSize:'18px',
+    textDecoration:'underline',
+    textUnderlineOffset: '7px'
+  },
   sidebar: {
     width: '100%',
     backgroundColor: 'white',

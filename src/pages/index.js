@@ -31,8 +31,8 @@ export default function Home() {
               style={{
               position: 'fixed',
               marginTop: `${(index) *30}px`,
-              right: `${(index +1) * 50}px`,
-              zIndex: index, // Usa l'indice iniziale
+              left: `${(index +1) * 50}px`,
+              zIndex:(10- index), // Usa l'indice iniziale
               transition: 'z-index 0.2s ease-in-out',
               cursor: 'pointer',
             }}>
@@ -40,7 +40,6 @@ export default function Home() {
             className="imageHome"
             key={cover.id}
             src={cover.url}
-           
             
           />
           </div>

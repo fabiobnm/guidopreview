@@ -244,7 +244,7 @@ display: grid;
 
 .educational{
   display: flex;
-    margin-top: 50px;
+    margin-top: 85px;
     gap: 76px;
     margin-bottom: 150px;
     padding: 45px;
@@ -502,7 +502,7 @@ list-style-type: none;
 }
 .boxImageHome{
   height: auto;
-    margin: 15vh 20% 0px;
+    margin: 17vh 15% 0px;
     display: flex;
     transform: translateY(-50%);
    
