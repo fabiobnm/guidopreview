@@ -496,8 +496,8 @@ list-style-type: none;
     right: 0px;
 }
 .imageHome{
-  width: 45vw;
-    height: auto;
+  height: 60vH;
+    width: auto;
     margin: auto;
 }
 .boxImageHome{
