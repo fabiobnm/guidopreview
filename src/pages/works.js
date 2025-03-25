@@ -102,6 +102,37 @@ export default function Home() {
                 />
               </div>
             ))}
+
+{progetto.video.map((video, index) => (
+             <div
+             key={index}
+             className="gallery-image-container"
+             style={{
+               height: 'auto',
+               overflow: 'hidden',
+               margin: 'auto',
+               marginRight: '0px',
+               cursor: 'pointer',
+             }}
+             onClick={(e) => {
+               if(video.fileVideo){
+                window.open(video.fileVideo.url, '_blank');// Reindirizza al link
+              }
+             
+            }}
+           >
+             
+             <Image
+               width={200}
+               height={200}
+               src={video.thumbnail?.url}
+               alt={`${progetto.nome} galleria ${index}`}
+               style={{ width: '100%', objectFit: 'cover' }}
+             />
+           </div>
+            ))}
+
+
           </div>
         </div>
       ))}

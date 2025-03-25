@@ -24,6 +24,10 @@ export const GET_POSTSOrdine = gql`
       galleria(first:100){
         url
       }
+      video{
+        thumbnail{url}
+        fileVideo{url}
+      }
     }
   }
 }

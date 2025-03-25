@@ -62,7 +62,7 @@ const Sidebar = () => {
         {/* Guido Borso a sinistra */}
         <li style={styles.left}>
           <Link className='vociMenuHeader' id='guidoBold' href="/" style={router.pathname === '/' ? styles.linkHome : styles.linkHome}>
-            GUIDO BORSO
+          Guido Borso
           </Link>
         </li>
 
@@ -110,7 +110,7 @@ const Sidebar = () => {
       </ul>
 
       <div className="headerMobile">
-        <Link href="/"  id='guidoBold' style={styles.linkHome}>GUIDO BORSO</Link>
+        <Link href="/"  id='guidoBold' style={styles.linkHome}>Guido Borso</Link>
       
         {/* Bottone per aprire/chiudere il menu */}
         <button
