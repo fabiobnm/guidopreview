@@ -93,9 +93,7 @@ export default function Home() {
                 onClick={() => openModal(progetto.galleria, index)}
               >
                 
-                <Image
-                  width={200}
-                  height={200}
+                <img
                   src={image.url}
                   alt={`${progetto.nome} galleria ${index}`}
                   style={{ width: '100%', objectFit: 'cover' }}
