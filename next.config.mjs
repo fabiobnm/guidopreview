@@ -8,6 +8,7 @@ const nextConfig = {
         hostname: "eu-west-2.graphassets.com",
       },
     ],
+    minimumCacheTTL: 2678400, // 31 giorni
   },
 };
 
