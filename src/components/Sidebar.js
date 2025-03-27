@@ -10,9 +10,12 @@ const Sidebar = () => {
   const [hoverText2, setHoverText2] = useState("Workshop"); // Stato per gestire il testo
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Stato per il menu mobile
 
-
   function getRandomColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    let color;
+    do {
+      color = Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    } while (parseInt(color, 16) > 0xEEEEEE); // Evita i colori molto chiari
+    return `#${color}`;
   }
 
   useEffect(() => {
