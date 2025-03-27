@@ -21,7 +21,7 @@ export const GET_POSTSOrdine = gql`
   works(first:100){
     ... on Progetti{
       nome
-      galleria(first:100){
+      galleria(first:1000){
         url
       }
       video{
