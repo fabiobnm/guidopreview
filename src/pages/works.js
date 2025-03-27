@@ -93,7 +93,9 @@ export default function Home() {
                 onClick={() => openModal(progetto.galleria, index)}
               >
                 
-                <img
+                <Image
+                  width={200}
+                  height={200}
                   src={image.url}
                   alt={`${progetto.nome} galleria ${index}`}
                   style={{ width: '100%', objectFit: 'cover' }}
@@ -120,7 +122,9 @@ export default function Home() {
             }}
            >
              
-             <img
+             <Image
+               width={200}
+               height={200}
                src={video.thumbnail?.url}
                alt={`${progetto.nome} galleria ${index+progetto.galleria.length}`}
                style={{ width: '100%', objectFit: 'cover' }}
