@@ -40,8 +40,6 @@ export default function Home() {
           <div className="aboutBio" dangerouslySetInnerHTML={{ __html: data.abouts[0].biography.html }}></div>
         </p>
       </div>
-      <div className="aboutText" dangerouslySetInnerHTML={{ __html: data.abouts[0].cv.html }}></div>
-
 
       <div className='divBookZine'>       
         <p style={{color:'black',fontWeight: 'bolder'}}>Books:</p>
@@ -105,6 +103,9 @@ export default function Home() {
           />
         )}
       </div>
+      <div className="aboutText" dangerouslySetInnerHTML={{ __html: data.abouts[0].cv.html }}></div>
+
+
 
       <Sidebar />
     </main>
