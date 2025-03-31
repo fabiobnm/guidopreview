@@ -12,38 +12,12 @@ export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentGallery, setCurrentGallery] = useState([]);
-  const [selectedCreative, setSelectedCreative] = useState(null);
-
-  useEffect(() => {
-    if (data?.ordineDeiWorks?.[0]?.works?.length > 0) {
-      setSelectedCreative(data.ordineDeiWorks[0].works[0].id);
-    }
-  }, [data]);
 
   const modalAnimation = useSpring({
     opacity: isModalOpen ? 1 : 0,
     transform: isModalOpen ? 'scale(1)' : 'scale(0.8)',
     config: { tension: 300, friction: 25 },
   });
-
-  const handleClick = (progetto) => {
-    console.log('parte'+ progetto);
-    
-    
-    if (selectedCreative === progetto) {
-      setSelectedCreative(null);
-      console.log('uguale');
-      
-    } else {
-      console.log('diverso');
-      
-      setSelectedCreative(null);
-      setTimeout(() => {
-        setSelectedCreative(progetto);
-      }, 500);
-    }
-  };
-
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -79,17 +53,13 @@ export default function Home() {
   };
 
   return (
-    <main style={{ marginTop: '75px' , marginBottom:'200px'}}>
+    <main style={{ marginTop: '75px' }}>
       {data.ordineDeiWorks[0].works.map((progetto) => (
-        <div className="projectDivWork" key={progetto.id} style={{marginBottom:0}}>
-          <h1   onClick={() => handleClick(progetto.id)}  style={{ color: 'black', fontSize: '20px', padding: '0px', paddingLeft: '0', fontFamily: 'MyFontThin' , cursor:'pointer'}}>
+        <div className="projectDivWork" key={progetto.id}>
+          <h1 style={{ color: 'black', fontSize: '20px', padding: '50px', paddingLeft: '0', fontFamily: 'MyFontThin' }}>
             {progetto.nome}
           </h1>
-          <div className="caros" style={{ transition: selectedCreative === progetto.nome
-    ? 'max-height 0.5s, opacity 0s'  // Nessuna transizione quando si apre
-    : 'max-height 0.5s, opacity 10s', // Transizione di 1s quando si chiude
-     maxHeight: selectedCreative === progetto.id ? 'max-content' : '0',
-     marginBlock: selectedCreative === progetto.id ? '20px 50px' : '0'}}>
+          <div className="caros">
             {progetto.galleria.map((image, index) => (
               <div
                 key={index}

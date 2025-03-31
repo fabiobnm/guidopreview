@@ -41,6 +41,9 @@ export default function Home() {
         </p>
       </div>
 
+      <div className="aboutText" dangerouslySetInnerHTML={{ __html: data.abouts[0].education.html }}></div>
+
+
       <div className='divBookZine'>       
         <p style={{color:'black',fontWeight: 'bolder'}}>Books:</p>
         {data.abouts[0].books.map((tour) => (
@@ -70,7 +73,6 @@ export default function Home() {
           />
         )}
       </div>
-
 
 
 

@@ -76,7 +76,7 @@ const Sidebar = () => {
               href="/works"
               style={router.pathname === '/works' ? styles.activeLink : styles.link}
             >
-              Works
+              works
             </Link>
           </li>
           <li
@@ -86,7 +86,7 @@ const Sidebar = () => {
         href="/commissions"
         style={router.pathname === "/commissions" ? styles.activeLink : styles.link}
       >
-        Commissions
+        commissions
       </Link>
     </li>
 
@@ -95,7 +95,7 @@ const Sidebar = () => {
         href="/workshops"
         style={router.pathname === "/workshops" ? styles.activeLink : styles.link}
       >
-        Workshops
+        workshops
       </Link>
     </li>
    
@@ -107,7 +107,7 @@ const Sidebar = () => {
             href="/about"
             style={router.pathname === '/about' ? styles.activeLinkAbout : styles.linkAbout}
           >
-            About
+            about
           </Link>
         </li>
       </ul>
@@ -128,15 +128,15 @@ const Sidebar = () => {
           <ul className="menuOpenMobile" style={styles.mobileMenu}>
             <li >
               
-              <Link  style={router.pathname === "/works" ? styles.linkMobileActive : styles.linkMobile} href="/works">Works</Link>
+              <Link  style={router.pathname === "/works" ? styles.linkMobileActive : styles.linkMobile} href="/works">works</Link>
             </li>
             <li>
-              <Link  style={router.pathname === "/commissions" ? styles.linkMobileActive : styles.linkMobile}  href="/commissions" >Commissions</Link>
+              <Link  style={router.pathname === "/commissions" ? styles.linkMobileActive : styles.linkMobile}  href="/commissions" >commissions</Link>
             </li>
            
             <li style={{marginBottom:'20px'}}>
              
-              <Link   style={router.pathname === "/workshops" ? styles.linkMobileActive : styles.linkMobile}  href="/workshops" >Workshops</Link>
+              <Link   style={router.pathname === "/workshops" ? styles.linkMobileActive : styles.linkMobile}  href="/workshops" >workshops</Link>
             </li>
 
             <li>

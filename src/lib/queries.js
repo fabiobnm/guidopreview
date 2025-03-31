@@ -20,6 +20,7 @@ export const GET_POSTSOrdine = gql`
   id
   works(first:100){
     ... on Progetti{
+      id
       nome
       galleria(first:1000){
         url
@@ -65,6 +66,8 @@ export const GET_POSTSAbout = gql`
 query {
   abouts {
     biography{
+    html}
+    education{
     html}
     cv{
     html}
