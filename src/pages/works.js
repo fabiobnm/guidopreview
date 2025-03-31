@@ -79,7 +79,7 @@ export default function Home() {
   };
 
   return (
-    <main style={{ marginTop: '75px' , marginBottom:'200px'}}>
+    <main style={{ marginTop: '118px' , marginBottom:'200px'}}>
       {data.ordineDeiWorks[0].works.map((progetto) => (
         <div className="projectDivWork" key={progetto.id} style={{marginBottom:0}}>
           <h1   onClick={() => handleClick(progetto.id)}  style={{ color: 'black', fontSize: '20px', padding: '0px', paddingLeft: '0', fontFamily: 'MyFontThin' , cursor:'pointer'}}>
