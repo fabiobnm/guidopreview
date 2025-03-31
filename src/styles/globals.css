@@ -439,16 +439,16 @@ display: grid;
 .prev-btn {
   left: 0;
   top: 0;
-  width: 40%;
-  height: 100%;
+  width: 50%;
+  height: 80%;
   background: none;
   cursor: w-resize;}
 
 .next-btn {
   right: 0px;
     top: 0;
-    height: 100%;
-    width: 40%;
+    height: 80%;
+    width: 50%;
     background: none;
     cursor: e-resize;
 }
@@ -763,6 +763,33 @@ list-style-type: none;
   .headerDesktop{
     
   display: none;
+  }
+
+  .carousel-image {
+    max-width: 100vW;
+    height: auto;
+  }
+  .carousel-image {
+    max-height: 90vH;
+    object-fit: contain;
+    width: 90vW;
+  }
+
+  .prev-btn {
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 80%;
+    background: none;
+    cursor: w-resize;}
+  
+  .next-btn {
+    right: 0px;
+      top: 0;
+      height: 80%;
+      width: 50%;
+      background: none;
+      cursor: e-resize;
   }
   
 }

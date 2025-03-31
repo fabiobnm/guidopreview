@@ -68,7 +68,7 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index)}
               >
-                <Image width={200} height={200} src={image.url} alt={progetto.nome} style={{ width: '100%', objectFit: 'cover' }} />
+                <Image width={200} height={200} src={image.url} alt={progetto.nome} style={{ width: '100%', objectFit: 'cover', cursor: 'pointer' }} />
               </div>
             ))}
             {progetto.video.map((video, index) => (
@@ -79,7 +79,7 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index + progetto.galleria.length)}
               >
-                <Image width={200} height={200} src={video.thumbnail?.url} alt={progetto.nome} style={{ width: '100%', objectFit: 'cover' }} />
+                <Image width={200} height={200} src={video.thumbnail?.url} alt={progetto.nome} style={{ width: '100%', objectFit: 'cover', cursor: 'pointer' }} />
               </div>
             ))}
           </div>
