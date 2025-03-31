@@ -127,6 +127,11 @@ body {
   pointer-events: none; /* Evita interazioni con il mouse */
   -webkit-user-drag: none; /* Disabilita il trascinamento su browser WebKit */
 }
+.imageHomeMobile {
+  user-select: none; /* Evita la selezione */
+  pointer-events: none; /* Evita interazioni con il mouse */
+  -webkit-user-drag: none; /* Disabilita il trascinamento su browser WebKit */
+}
 .imgCommission{
   user-select: none; /* Evita la selezione */
   -webkit-user-drag: none; /* Disabilita il trascinamento su browser WebKit */
@@ -510,6 +515,10 @@ list-style-type: none;
   height: 60vH;
     width: auto;
     margin: auto;
+    display: block;
+}
+.imageHomeMobile{
+  display: none;
 }
 .boxImageHome{
   height: auto;
@@ -610,8 +619,16 @@ list-style-type: none;
     font-size:40px;
     line-height: 1;
   }
+ 
+
+  .imageHomeMobile{
+    width:  70vW;
+    height: auto;
+      margin: auto;
+      display: block;
+  }
   .imageHome{
-    width: 80vW;
+    display: none;
   }
 
   .commissionsDiv{

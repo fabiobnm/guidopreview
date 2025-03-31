@@ -45,6 +45,27 @@ export default function Home() {
           </div>
           </Draggable>
         ))}
+
+{data.homePages[0].cover.map((cover, index) => (
+         <Draggable>
+          <div onClick={handleClick}
+              style={{
+              position: 'fixed',
+              marginTop: `${(index) *100}px`,
+              left: 0,
+              zIndex:(10- index), // Usa l'indice iniziale
+              transition: 'z-index 0.2s ease-in-out',
+              cursor: 'pointer',
+            }}>
+         <img
+            className="imageHomeMobile"
+            key={cover.id}
+            src={cover.url}
+            
+          />
+          </div>
+          </Draggable>
+        ))}
       </div>
 
       <Sidebar />
