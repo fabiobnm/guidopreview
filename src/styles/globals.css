@@ -839,7 +839,7 @@ list-style-type: none;
 
   .next-btnVideo {
     right: -57px;
-    top: -43px;
+    top: 70px;
       height: auto;
       width: auto;
       background: none;
@@ -849,7 +849,7 @@ list-style-type: none;
 
   .prev-btnVideo {
     left: -57px;
-    top: -43px;
+    top: 70px;
     width: auto;
     height: auto;
     background: none;
