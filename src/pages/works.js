@@ -120,7 +120,13 @@ export default function Home() {
         <div className="modal-overlay" onClick={closeModal}>
           <animated.div style={modalAnimation} className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-btn" onClick={closeModal}></button>
-            <button className="nav-btn prev-btn" onClick={() => navigateCarousel(-1)}></button>
+            {currentGallery[currentImageIndex]?.url ? (
+              <button className="nav-btn prev-btn" onClick={() => navigateCarousel(-1)}></button>
+            ) : (
+              <button className="nav-btn prev-btnVideo"   onClick={() => navigateCarousel(-1)}><p className='carosButt'>PREV</p></button>
+            )}
+
+            
             {currentGallery[currentImageIndex]?.url ? (
               <img src={currentGallery[currentImageIndex]?.url} alt="Gallery item" className="carousel-image" />
             ) : (
@@ -129,7 +135,13 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
             )}
-            <button className="nav-btn next-btn" onClick={() => navigateCarousel(1)}></button>
+
+            {currentGallery[currentImageIndex]?.url ? (
+              <button className="nav-btn next-btn" onClick={() => navigateCarousel(1)}></button>
+            ) : (
+              <button className="nav-btn next-btnVideo"  onClick={() => navigateCarousel(1)}><p className='carosButt'>NEXT</p></button>
+            )}  
+            
           </animated.div>
         </div>
       )}

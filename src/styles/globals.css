@@ -144,6 +144,9 @@ display: none;
 display: block;
 }
 
+.carosButt{
+  display: none;
+}
 
 .carosOld{
 
@@ -579,6 +582,25 @@ list-style-type: none;
   transform: rotateY(180deg); /* Parte girata di default */
 }
 
+.next-btnVideo {
+  right: 0px;
+    top: 0;
+    height: 80%;
+    width: 50%;
+    background: none;
+    cursor: e-resize;
+}
+
+.prev-btnVideo {
+  left: 0px;
+  top: 0;
+  height: 80%;
+  width: 50%;
+  background: none;
+  cursor: w-resize;
+  
+}
+
 
 /* Media query per smartphone (max-width 768px)  ////////////////////////////////////////////////////////////////////////
  //////////////////////////////////////////////////////////////////////// ////////////////////////////////////////////////////////////////////////
@@ -596,6 +618,11 @@ list-style-type: none;
     width: 100%;
     height: auto;
     position: relative;
+  }
+
+  .carosButt{
+    display: block;
+    font-size: 18px;
   }
   .projectDivWork{
     height: auto;
@@ -798,7 +825,8 @@ list-style-type: none;
     width: 50%;
     height: 80%;
     background: none;
-    cursor: w-resize;}
+    cursor: w-resize;
+  }
   
   .next-btn {
     right: 0px;
@@ -807,6 +835,26 @@ list-style-type: none;
       width: 50%;
       background: none;
       cursor: e-resize;
+  }
+
+  .next-btnVideo {
+    right: -57px;
+    top: -43px;
+      height: auto;
+      width: auto;
+      background: none;
+      cursor: e-resize;
+      display: block;
+  }
+
+  .prev-btnVideo {
+    left: -57px;
+    top: -43px;
+    width: auto;
+    height: auto;
+    background: none;
+    cursor: w-resize;
+    display: block;
   }
   
 }
