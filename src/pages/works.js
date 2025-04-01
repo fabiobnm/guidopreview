@@ -40,7 +40,7 @@ export default function Home() {
       setSelectedCreative(null);
       setTimeout(() => {
         setSelectedCreative(progetto);
-      }, 500);
+      }, 0);
     }
   };
 
@@ -85,9 +85,9 @@ export default function Home() {
           <h1   onClick={() => handleClick(progetto.id)}  style={{ color: 'black', fontSize: '20px', padding: '0px', paddingLeft: '0', fontFamily: 'MyFontThin' , cursor:'pointer'}}>
             {progetto.nome}
           </h1>
-          <div className="caros" style={{ transition: selectedCreative === progetto.nome
+          <div className="caros" style={{ transition: selectedCreative === progetto.id
     ? 'max-height 0.5s, opacity 0s'  // Nessuna transizione quando si apre
-    : 'max-height 0.5s, opacity 10s', // Transizione di 1s quando si chiude
+    : 'max-height 0.5s, opacity 1s', // Transizione di 1s quando si chiude
      maxHeight: selectedCreative === progetto.id ? 'max-content' : '0',
      marginBlock: selectedCreative === progetto.id ? '20px 50px' : '0'}}>
             {progetto.galleria.map((image, index) => (
