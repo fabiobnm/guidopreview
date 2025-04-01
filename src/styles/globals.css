@@ -533,7 +533,7 @@ list-style-type: none;
 
 .divCommissions{
     display: flex;
-    margin-top: 20vh;
+    margin-top: 118px;
     margin-left: 45px;
     width: fit-content;
 }
@@ -549,7 +549,7 @@ list-style-type: none;
 .textWorkshops{
   color:black;
   margin-left: 45px;
-  margin-top: 145px;
+  margin-top: 118px;
   width: 50%;
 }
 
