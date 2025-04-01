@@ -123,7 +123,7 @@ export default function Home() {
             {currentGallery[currentImageIndex]?.url ? (
               <button className="nav-btn prev-btn" onClick={() => navigateCarousel(-1)}></button>
             ) : (
-              <button className="nav-btn prev-btnVideo"   onClick={() => navigateCarousel(-1)}><p className='carosButt'>PREV</p></button>
+              <button className="nav-btn prev-btnVideo"   onClick={() => navigateCarousel(-1)}><p className='carosButt'>prev</p></button>
             )}
 
             
@@ -139,7 +139,7 @@ export default function Home() {
             {currentGallery[currentImageIndex]?.url ? (
               <button className="nav-btn next-btn" onClick={() => navigateCarousel(1)}></button>
             ) : (
-              <button className="nav-btn next-btnVideo"  onClick={() => navigateCarousel(1)}><p className='carosButt'>NEXT</p></button>
+              <button className="nav-btn next-btnVideo"  onClick={() => navigateCarousel(1)}><p className='carosButt'>next</p></button>
             )}  
             
           </animated.div>
