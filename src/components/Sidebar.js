@@ -212,7 +212,7 @@ const styles = {
   },
   linkAbout: {
     display: 'block',
-    padding: '5px 0px 0px 20px',
+    padding: '5px 0px 0px 0px',
     textDecoration: 'none',
     color: 'black',
     fontSize: '20px',
