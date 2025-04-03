@@ -141,6 +141,36 @@ export default function Home() {
             ) : (
               <button className="nav-btn next-btnVideo"  onClick={() => navigateCarousel(1)}><p className='carosButt'>next</p></button>
             )}  
+
+           
+               {selectedCreative && data.ordineDeiWorks[0].works.find(p => p.id === selectedCreative)?.nome === 'Artchive' && (
+        <h1 style={{ color: 'black', position: 'relative', bottom: 0, left: 0, zIndex: 999 }}>
+           {currentImageIndex === 0 && <p >Mattia Turco</p>}
+        {currentImageIndex === 1 && <p >1</p>}
+        {currentImageIndex === 2 && <p>2</p>}
+        {currentImageIndex === 3 && <p >3</p>}
+        {currentImageIndex === 4 && <p>4</p>}  
+        {currentImageIndex === 5 && <p>5</p>}  
+        {currentImageIndex === 6 && <p>6</p>}  
+        {currentImageIndex === 7 && <p>7</p>}  
+        {currentImageIndex === 8 && <p>8</p>}  
+        {currentImageIndex === 9 && <p>9</p>}  
+        {currentImageIndex ===10 && <p>10</p>}  
+        {currentImageIndex === 11 && <p>11</p>}  
+        {currentImageIndex === 12 && <p>12</p>} 
+        {currentImageIndex === 13 && <p >13</p>}
+        {currentImageIndex === 14 && <p>14</p>}  
+        {currentImageIndex === 15 && <p>Giacomo Spazio</p>}  
+        {currentImageIndex === 16 && <p>16</p>}  
+        {currentImageIndex === 17 && <p>17</p>}  
+        {currentImageIndex === 18 && <p>Solomostry</p>}  
+        {currentImageIndex === 19 && <p>19</p>}  
+        {currentImageIndex ===20 && <p>20</p>}   
+        </h1>
+      )}
+             
+          
+            
             
           </animated.div>
         </div>
