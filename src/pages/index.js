@@ -51,8 +51,8 @@ export default function Home() {
           <div onClick={handleClick}
               style={{
               position: 'fixed',
-              marginTop: `${(index) *100}px`,
-              right: `${(index +1) * 10}px`,
+              marginTop: `${(index) *70}px`,
+              right: `${(index +1) * 20}px`,
               zIndex:(10- index), // Usa l'indice iniziale
               transition: 'z-index 0.2s ease-in-out',
               cursor: 'pointer',

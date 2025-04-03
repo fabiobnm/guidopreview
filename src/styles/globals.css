@@ -170,6 +170,13 @@ display: block;
   color: black;
   margin: 45px;
 }
+.aboutTextDate{
+  width: 90vW;
+  color: black;
+  margin: 45px;
+  column-count: 2;
+  column-gap: 68px
+}
 
 .imgAbout{
   color: black;
@@ -612,6 +619,7 @@ list-style-type: none;
   }
   .boxImageHome{
       display: block;
+      margin: 17vh 5% 0px;
   }
   .imgAbout{
     color: black;
@@ -676,6 +684,16 @@ list-style-type: none;
     padding: 1rem;
     margin: 0;
   }
+
+  .aboutTextDate{
+    width: 100%;
+    color: black;
+    padding: 1rem;
+    margin: 0;
+    column-count: 1;
+    column-gap: 0;
+  }
+  
 
   .imgWorkshop {
     height: max-content;
