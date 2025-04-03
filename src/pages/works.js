@@ -142,9 +142,16 @@ export default function Home() {
               <button className="nav-btn next-btnVideo"  onClick={() => navigateCarousel(1)}><p className='carosButt'>next</p></button>
             )}  
 
-           
-               {selectedCreative && data.ordineDeiWorks[0].works.find(p => p.id === selectedCreative)?.nome === 'Artchive' && (
-        <h1 style={{ color: 'black', position: 'relative', bottom: 0, left: 0, zIndex: 999 }}>
+   
+             
+          
+            
+            
+          </animated.div>
+
+                  
+          {selectedCreative && data.ordineDeiWorks[0].works.find(p => p.id === selectedCreative)?.nome === 'Artchive' && (
+        <h1 style={{ color: 'black', position: 'fixed', bottom: 45, right: 45, zIndex: 999 }}>
            {currentImageIndex === 0 && <p >Mattia Turco</p>}
         {currentImageIndex === 1 && <p >1</p>}
         {currentImageIndex === 2 && <p>2</p>}
@@ -168,11 +175,6 @@ export default function Home() {
         {currentImageIndex ===20 && <p>20</p>}   
         </h1>
       )}
-             
-          
-            
-            
-          </animated.div>
         </div>
       )}
     </main>
