@@ -105,7 +105,7 @@ export default function Home() {
           />
         )}
       </div>
-      <div className="aboutText" dangerouslySetInnerHTML={{ __html: data.abouts[0].cv.html }}></div>
+      <div className="aboutText" style={{ width:'92vw',   columnCount: '2', columnGap: '68px'}} dangerouslySetInnerHTML={{ __html: data.abouts[0].cv.html }}></div>
 
 
 
