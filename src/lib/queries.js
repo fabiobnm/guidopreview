@@ -77,10 +77,15 @@ query {
     fanzine(first:100){
       text
       img{url}
+      gallery(first:100){url}
+
+      
     }
     books(first:100){
       text
       img{url}
+      gallery(first:100){url}
+
     }
   }
 }

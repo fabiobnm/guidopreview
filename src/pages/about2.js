@@ -42,7 +42,6 @@ export default function Home() {
     return <p>Error: {error.message}</p>;
   }
 
-
   const openModal = (gallery) => {
     if (!gallery || gallery.length === 0) return;
     const images = gallery.map((img) => img.url); // Estrai gli URL
@@ -73,7 +72,6 @@ export default function Home() {
 
       <div className="aboutText" dangerouslySetInnerHTML={{ __html: data.abouts[0].education.html }}></div>
 
-
       <div className='divBookZine'>       
         <p style={{color:'black',fontWeight: 'bolder'}}>Books:</p>
         {data.abouts[0].books.map((book) => (
@@ -83,7 +81,7 @@ export default function Home() {
             onMouseLeave={() => setHoveredImage(null)}
             onMouseMove={handleMouseMove}
             onClick={() => openModal(book.gallery)}
-            style={{ cursor: 'pointer', margin: '0px' , marginTop:'1px', color:'black', width: 'fit-content'}} // Aggiunge margine tra i <p>
+            style={{ cursor: 'pointer', margin: '0px' , marginTop:'1px', color:'black', width: 'fit-content'}}
           >
             {book.text}
           </p>
@@ -98,56 +96,20 @@ export default function Home() {
               left: `${position.x}px`,
               width: '300px',
               padding: '5px',
-              pointerEvents: 'none', // Evita che l'immagine interferisca con il mouse
-           
+              pointerEvents: 'none',
             }}
           />
         )}
       </div>
-
-
-
-      <div className='divBookZine'>       
-        <p style={{color:'black',fontWeight: 'bolder'}}>Fanzines:</p>
-        {data.abouts[0].fanzine.map((zine) => (
-          <p
-            key={zine.id}
-            onMouseEnter={() => setHoveredImage(zine.img?.url)}
-            onMouseLeave={() => setHoveredImage(null)}
-            onMouseMove={handleMouseMove}
-            onClick={() => openModal(zine.gallery)}
-            style={{ cursor: 'pointer', margin: '0px' , marginTop:'1px', color:'black', width: 'fit-content'}} // Aggiunge margine tra i <p>
-          >
-            {zine.text}
-          </p>
-        ))}
-
-        {hoveredImage && (
-          <img
-            src={hoveredImage}
-            style={{
-              position: 'fixed',
-              top: `${position.y}px`,
-              left: `${position.x}px`,
-              width: '300px',
-              padding: '5px',
-              pointerEvents: 'none', // Evita che l'immagine interferisca con il mouse
-           
-            }}
-          />
-        )}
-      </div>
-      <div className="aboutText" style={{ width:'92vw',   columnCount: '2', columnGap: '68px'}} dangerouslySetInnerHTML={{ __html: data.abouts[0].cv.html }}></div>
-
       {isModalOpen && (
       <div className="modal-overlay" onClick={closeModal}>
       <animated.div style={modalAnimation} className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={closeModal}></button>
-        <button className="nav-btn prev-btn" onClick={() => navigateCarousel(-1)}></button>
+        <button className="close-btn" onClick={closeModal}>✖</button>
+        <button className="nav-btn prev-btn" onClick={() => navigateCarousel(-1)}>←</button>
         {currentGallery.length > 0 && (
           <img src={currentGallery[currentImageIndex]} alt={'alt'+currentImageIndex} className="carousel-image" />
         )}
-        <button className="nav-btn next-btn" onClick={() => navigateCarousel(1)}></button>
+        <button className="nav-btn next-btn" onClick={() => navigateCarousel(1)}>→</button>
       </animated.div>
       </div>
       )}
