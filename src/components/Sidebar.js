@@ -6,8 +6,6 @@ const Sidebar = () => {
   const router = useRouter(); // Ottieni il percorso attuale
   const [isVisible, setIsVisible] = useState(true); // Stato per la visibilità
   const [lastScrollPos, setLastScrollPos] = useState(0); // Ultima posizione di scroll
-  const [hoverText, setHoverText] = useState("Commissions"); // Stato per gestire il testo
-  const [hoverText2, setHoverText2] = useState("Workshop"); // Stato per gestire il testo
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Stato per il menu mobile
 
   function getRandomColor() {
@@ -113,15 +111,11 @@ const Sidebar = () => {
       </ul>
 
       <div className="headerMobile">
-        <Link href="/"  id='guidoBold' style={styles.linkHome}>Guido Borso</Link>
-      
-        {/* Bottone per aprire/chiudere il menu */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          style={{color:'black', fontSize:'29px'}}
-        >
+        <Link href="/" id='guidoBold' style={styles.linkHome}>Guido Borso</Link>
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={styles.mobileButton}>
           {isMobileMenuOpen ? '-' : '+'}
         </button>
+      </div>
 
         {/* Mostra/Nasconde il menu mobile */}
         {isMobileMenuOpen && (
@@ -150,7 +144,8 @@ const Sidebar = () => {
            
           </ul>
         )}
-      </div>
+        
+      
     </aside>
   );
 };
@@ -232,6 +227,18 @@ const styles = {
     color: 'black',
     fontSize: '20px',
     borderBottom: '1px solid',
+  },
+
+  mobileButton: {
+    fontSize: '29px',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    color:'black'
+  },
+  mobileMenu: {
+    backgroundColor: 'white',
+    textAlign: 'left',
   },
 
  

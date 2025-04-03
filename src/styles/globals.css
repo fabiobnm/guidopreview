@@ -511,6 +511,7 @@ list-style-type: none;
 }
 .menuOpenMobile li{
   margin-bottom: 10px;
+  text-align: end;
 }
 .dailyButton{
   width: auto;
@@ -615,7 +616,10 @@ list-style-type: none;
  */
 @media only screen and (max-width: 768px) {
   .headerMobile{
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
   }
   .boxImageHome{
       display: block;
