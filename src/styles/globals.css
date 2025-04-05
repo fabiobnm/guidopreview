@@ -65,6 +65,11 @@ body {
   font-family: 'MyFont';
 }
 
+.ciaoiosono:hover{
+background-color:#b48ff8;
+color: white;
+}
+
 #guidoBold{
   font-family: 'MyFontBold';
 }
