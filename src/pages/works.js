@@ -82,7 +82,7 @@ export default function Home() {
     <main style={{ marginTop: '118px' , marginBottom:'200px'}}>
       {data.ordineDeiWorks[0].works.map((progetto) => (
         <div className="projectDivWork" key={progetto.id} style={{marginBottom:0}}>
-          <h1   onClick={() => handleClick(progetto.id)}  style={{ color: 'black', fontSize: '20px', padding: '0px', paddingLeft: '0', fontFamily: 'MyFontThin' , cursor:'pointer'}}>
+          <h1   onClick={() => handleClick(progetto.id)}  style={{ color: 'black', fontSize: '16px', padding: '0px', paddingLeft: '0', fontFamily: 'MyFont' , cursor:'pointer'}}>
             {progetto.nome}
           </h1>
           <div className="caros" style={{ transition: selectedCreative === progetto.id
