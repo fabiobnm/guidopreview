@@ -138,7 +138,7 @@ export default function Home() {
         )}
       </div>
       <div className="aboutTextDate" dangerouslySetInnerHTML={{ __html: data.abouts[0].cv.html }}></div>
-      <div style={{color:'black', position:'relative', bottom:20, textAlign:'end', paddingRight:45, fontSize:10}}>developed by <a href="mailto:ffabiobnm@gmail.com" className='ciaoiosono'>ciaoiosonofabio</a></div>
+      <div style={{color:'black', position:'relative', bottom:20, textAlign:'end', paddingRight:45, fontSize:10}}>digital construction by <a href="mailto:ffabiobnm@gmail.com" className='ciaoiosono'>ciaoiosonofabio</a></div>
 
       {isModalOpen && (
       <div className="modal-overlay" onClick={closeModal}>
