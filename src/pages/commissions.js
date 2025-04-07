@@ -8,6 +8,8 @@ import { useSpring, animated } from '@react-spring/web';
 export default function Home() {
   const { loading, error, data } = useQuery(GET_POSTSOrderComm, { client });
   const [hoverText, setHoverText] = useState("Commissioned works"); // Testo predefinito
+  const [loadedImages, setLoadedImages] = useState({});
+
 
   // Ref per il div che vogliamo scrollare
   const commissionsDivRef = useRef(null);
@@ -37,6 +39,10 @@ export default function Home() {
     commissionsDivRef.current.scrollLeft = scrollLeft.current - scroll;
   };
 
+  const handleImageLoad = (id) => {
+    setLoadedImages((prev) => ({ ...prev, [id]: true }));
+  };
+
   if (loading) return <p>Loading...</p>;
   if (error) {
     console.error('Errore nella query:', error.message);
@@ -56,21 +62,26 @@ export default function Home() {
         onMouseMove={handleMouseMove}
         style={{ cursor: 'grab' }} // Mostra il cursore come se fosse un "drag"
       >
-        {data.commission.commission.map((commissions) => (
-          <div key={commissions.id}>
-            <img
-              className="imgCommission"
-              src={commissions.img.url}
-              onMouseEnter={() => setHoverText(commissions.text)} // Cambia il testo quando passi sopra
-              onMouseLeave={() => setHoverText(" ")} // Ripristina il testo originale quando esci
-            />
-            <div
-              className="commissionTextMobile"
-              style={{ color: 'black', margin: '25px', marginBottom: '100px' }}
-              dangerouslySetInnerHTML={{ __html: commissions.text }}
-            ></div>
-          </div>
-        ))}
+       {data.commission.commission.map((commissions) => (
+  <div key={commissions.id}>
+    <img
+      className="imgCommission"
+      src={commissions.img.url}
+      onLoad={() => handleImageLoad(commissions.id)}
+      onMouseEnter={() => setHoverText(commissions.text)}
+      onMouseLeave={() => setHoverText(" ")}
+      style={{
+        opacity: loadedImages[commissions.id] ? 1 : 0
+       
+      }}
+    />
+    <div
+      className="commissionTextMobile"
+      style={{ color: 'black', margin: '25px', marginBottom: '100px' }}
+      dangerouslySetInnerHTML={{ __html: commissions.text }}
+    ></div>
+  </div>
+))}
       </div>
       <div
         className="commissionTextDesktop"

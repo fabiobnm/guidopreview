@@ -8,11 +8,16 @@ import Image from 'next/image';
 
 export default function Home() {
   const { loading, error, data } = useQuery(GET_POSTSOrdine, { client });
+  const [loadedImages, setLoadedImages] = useState({});
   
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentGallery, setCurrentGallery] = useState([]);
   const [selectedCreative, setSelectedCreative] = useState(null);
+
+  const handleImageLoad = (id) => {
+    setLoadedImages((prev) => ({ ...prev, [id]: true }));
+  };
 
   useEffect(() => {
     if (data?.ordineDeiWorks?.[0]?.works?.length > 0) {
@@ -98,7 +103,11 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index)}
               >
-                <Image width={200} height={200} src={image.url} alt={progetto.nome} style={{ width: '100%', objectFit: 'cover', cursor: 'pointer' }} />
+                <Image onLoad={() => handleImageLoad(image.id)}
+                       width={200} height={200} src={image.url} alt={progetto.nome} 
+                       style={{ width: '100%', objectFit: 'cover', cursor: 'pointer',
+                       opacity: loadedImages[image.id] ? 1 : 0,
+                       transition: 'opacity 0.2s', }} />
               </div>
             ))}
             {progetto.video.map((video, index) => (
@@ -109,7 +118,12 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index + progetto.galleria.length)}
               >
-                <Image width={200} height={200} src={video.thumbnail?.url} alt={progetto.nome} style={{ width: '100%', objectFit: 'cover', cursor: 'pointer' }} />
+                <Image  onLoad={() => handleImageLoad(video.id)}
+                        width={200} height={200} src={video.thumbnail?.url} alt={progetto.nome} 
+                        style={{ width: '100%', objectFit: 'cover', cursor: 'pointer',
+                        opacity: loadedImages[video.id] ? 1 : 0,
+                        transition: 'opacity 0.2s', }}  />
+                        
               </div>
             ))}
           </div>
