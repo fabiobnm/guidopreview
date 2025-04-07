@@ -67,6 +67,7 @@ export default function Home() {
     <img
       className="imgCommission"
       src={commissions.img.url}
+      loading="lazy"
       onLoad={() => handleImageLoad(commissions.id)}
       onMouseEnter={() => setHoverText(commissions.text)}
       onMouseLeave={() => setHoverText(" ")}
