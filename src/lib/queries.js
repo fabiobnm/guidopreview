@@ -26,7 +26,7 @@ export const GET_POSTSOrdine = gql`
         url
       }
       video{
-      id
+        id
         thumbnail{url}
         fileVideo{url}
       }

@@ -13,6 +13,12 @@ export default function Home() {
 
   const [imgDragCount, setImgDragCount] = useState(0); // ✅ dentro al componente
   const [imgDragSwag, setImgDragSwag] = useState(0); // ✅ dentro al componente
+  const [loadedImages, setLoadedImages] = useState({});
+
+
+  const handleImageLoad = (id) => {
+    setLoadedImages((prev) => ({ ...prev, [id]: true }));
+  };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -55,9 +61,15 @@ export default function Home() {
               cursor: 'pointer',
             }}>
          <img
+            onLoad={() => handleImageLoad(cover.id)}
             className="imageHome"
             key={cover.id}
             src={cover.url}
+            style={{
+              opacity: loadedImages[cover.id] ? 1 : 0,
+                        transition: 'opacity 0.2s',
+             
+            }}
             
           />
           </div>
@@ -77,9 +89,15 @@ export default function Home() {
               cursor: 'pointer',
             }}>
          <img
+            onLoad={() => handleImageLoad(cover.id)}
             className="imageHomeMobile"
             key={cover.id}
             src={cover.url}
+            style={{
+              opacity: loadedImages[cover.id] ? 1 : 0,
+                        transition: 'opacity 0.2s',
+             
+            }}
             
           />
           </div>

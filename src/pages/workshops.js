@@ -35,7 +35,7 @@ export default function Home() {
 
 // Componente separato per la gestione dell'hover
 const ImageHover = ({ progetto }) => {
-  const [imageSrc, setImageSrc] = useState(progetto.copertina.url);
+  const [imageSrc, setImageSrc] = useState(progetto.copertina?.url);
 
   return (
     <div>

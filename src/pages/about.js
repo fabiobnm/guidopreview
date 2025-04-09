@@ -11,6 +11,13 @@ export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentGallery, setCurrentGallery] = useState([]);
+  const [loadedImages, setLoadedImages] = useState({});
+
+
+  const handleImageLoad = (id) => {
+    setLoadedImages((prev) => ({ ...prev, [id]: true }));
+  };
+
 
   const handleMouseMove = (e) => {
     setPosition({ x: e.clientX + 10, y: e.clientY - 200 }); // Sposta leggermente l'immagine sopra al cursore
@@ -65,7 +72,13 @@ export default function Home() {
   return (
     <main>
       <div className="divCommissions">
-        <img className="imgAbout" src={data.abouts[0].immagine.url} />
+        <img onLoad={() => handleImageLoad(data.abouts[0].immagine.id)} 
+             style={{
+              opacity: loadedImages[data.abouts[0].immagine.id] ? 1 : 0,
+                        transition: 'opacity .2s',
+             
+            }}
+             className="imgAbout" src={data.abouts[0].immagine.url} />
         <p className="pAbout">
           <div className="aboutBio" dangerouslySetInnerHTML={{ __html: data.abouts[0].biography.html }}></div>
         </p>
