@@ -180,7 +180,9 @@ display: block;
   color: black;
   margin: 45px;
   column-count: 2;
-  column-gap: 68px
+  column-gap: 68px;
+  margin-bottom: 100px;
+
 }
 
 .imgAbout{
@@ -701,6 +703,8 @@ list-style-type: none;
     margin: 0;
     column-count: 1;
     column-gap: 0;
+    margin-bottom: 100px;
+
   }
   
 
