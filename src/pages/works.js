@@ -103,7 +103,7 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index)}
               >
-                <Image onLoad={() => handleImageLoad(image.id)}
+                <img onLoad={() => handleImageLoad(image.id)}
                        width={200} height={200} src={image.url} alt={progetto.nome} 
                        style={{ width: '100%', objectFit: 'cover', cursor: 'pointer',
                        opacity: loadedImages[image.id] ? 1 : 0,
@@ -118,7 +118,7 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index + progetto.galleria.length)}
               >
-                <Image  onLoad={() => handleImageLoad(video.id)}
+                <img  onLoad={() => handleImageLoad(video.id)}
                         width={200} height={200} src={video.thumbnail?.url} alt={progetto.nome} 
                         style={{ width: '100%', objectFit: 'cover', cursor: 'pointer',
                         opacity: loadedImages[video.id] ? 1 : 0,

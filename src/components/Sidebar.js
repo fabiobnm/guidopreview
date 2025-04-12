@@ -159,7 +159,8 @@ const styles = {
     color:'black',
     fontSize:'18px',
     textDecoration:'underline',
-    textUnderlineOffset: '7px'
+    textUnderlineOffset: '7px',
+    textDecorationThickness: '1px',
   },
   sidebar: {
     width: '100%',
@@ -234,7 +235,8 @@ const styles = {
     background: 'none',
     border: 'none',
     cursor: 'pointer',
-    color:'black'
+    color:'black',
+    fontFamily:'MyFontThin',
   },
   mobileMenu: {
     backgroundColor: 'white',

@@ -59,6 +59,7 @@ img{
   font-weight: normal;
   font-style: normal;
 }
+
 body {
   color: var(--foreground);
   background: white;
@@ -556,7 +557,7 @@ list-style-type: none;
   display: flex;
     overflow-x: scroll;
     width: auto;
-    margin-left: 50px;
+    margin-left: 45px;
     margin-top: 150px;
 
 }
