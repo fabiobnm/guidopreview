@@ -623,6 +623,9 @@ list-style-type: none;
  
  */
 @media only screen and (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
   .headerMobile{
     display: flex;
     justify-content: space-between;
