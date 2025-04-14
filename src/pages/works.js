@@ -171,20 +171,20 @@ export default function Home() {
         {currentImageIndex === 2 && <p>2</p>}
         {currentImageIndex === 3 && <p >3</p>}
         {currentImageIndex === 4 && <p>4</p>}  
-        {currentImageIndex === 5 && <p>5</p>}  
-        {currentImageIndex === 6 && <p>6</p>}  
+        {currentImageIndex === 5 && <p>Blu</p>}  
+        {currentImageIndex === 6 && <p>Solomostry</p>}  
         {currentImageIndex === 7 && <p>7</p>}  
-        {currentImageIndex === 8 && <p>8</p>}  
+        {currentImageIndex === 8 && <p>Pietro Spica</p>}  
         {currentImageIndex === 9 && <p>9</p>}  
         {currentImageIndex ===10 && <p>10</p>}  
         {currentImageIndex === 11 && <p>11</p>}  
         {currentImageIndex === 12 && <p>12</p>} 
-        {currentImageIndex === 13 && <p >13</p>}
+        {currentImageIndex === 13 && <p >Giacomo Spazio</p>}
         {currentImageIndex === 14 && <p>14</p>}  
-        {currentImageIndex === 15 && <p>Giacomo Spazio</p>}  
+        {currentImageIndex === 15 && <p>15</p>}  
         {currentImageIndex === 16 && <p>16</p>}  
         {currentImageIndex === 17 && <p>17</p>}  
-        {currentImageIndex === 18 && <p>Solomostry</p>}  
+        {currentImageIndex === 18 && <p>18</p>}  
         {currentImageIndex === 19 && <p>19</p>}  
         {currentImageIndex ===20 && <p>20</p>}   
         </h1>

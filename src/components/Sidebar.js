@@ -212,6 +212,7 @@ const styles = {
     textDecoration: 'none',
     color: 'black',
     fontSize: '16px',
+    paddingLeft: '20px'
   },
   activeLink: {
     display: 'block',
@@ -228,6 +229,7 @@ const styles = {
     color: 'black',
     fontSize: '16px',
     borderBottom: '1px solid',
+    paddingLeft: '20px'
   },
 
   mobileButton: {
