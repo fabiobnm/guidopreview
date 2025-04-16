@@ -166,25 +166,25 @@ export default function Home() {
                   
           {selectedCreative && data.ordineDeiWorks[0].works.find(p => p.id === selectedCreative)?.nome === 'Artchive' && (
         <h1 style={{ color: 'black', position: 'fixed', bottom: 45, right: 45, zIndex: 999 }}>
-           {currentImageIndex === 0 && <p >Mattia Turco</p>}
-        {currentImageIndex === 1 && <p >1</p>}
-        {currentImageIndex === 2 && <p>2</p>}
-        {currentImageIndex === 3 && <p >3</p>}
-        {currentImageIndex === 4 && <p>4</p>}  
-        {currentImageIndex === 5 && <p>Blu</p>}  
-        {currentImageIndex === 6 && <p>Solomostry</p>}  
-        {currentImageIndex === 7 && <p>7</p>}  
-        {currentImageIndex === 8 && <p>Pietro Spica</p>}  
-        {currentImageIndex === 9 && <p>9</p>}  
-        {currentImageIndex ===10 && <p>10</p>}  
-        {currentImageIndex === 11 && <p>11</p>}  
-        {currentImageIndex === 12 && <p>12</p>} 
-        {currentImageIndex === 13 && <p >Giacomo Spazio</p>}
-        {currentImageIndex === 14 && <p>14</p>}  
-        {currentImageIndex === 15 && <p>15</p>}  
-        {currentImageIndex === 16 && <p>16</p>}  
-        {currentImageIndex === 17 && <p>17</p>}  
-        {currentImageIndex === 18 && <p>18</p>}  
+           {currentImageIndex === 0 && <p >Mattia Turco - Milan, IT</p>}
+        {currentImageIndex === 1 && <p >Pedone - Grottaglie, IT</p>}
+        {currentImageIndex === 2 && <p>Marion Flament - Paris, FR</p>}
+        {currentImageIndex === 3 && <p >Mosa - Paris, FR </p>}
+        {currentImageIndex === 4 && <p>Nicole Banowetz - Khajuraho, IND</p>}  
+        {currentImageIndex === 5 && <p>Blu - Milan, IT</p>}  
+        {currentImageIndex === 6 && <p>Solomostry - Milan, IT</p>}  
+        {currentImageIndex === 7 && <p>Max Coulon - Paris, FR</p>}  
+        {currentImageIndex === 8 && <p>Pietro Spica - Milan, IT</p>}  
+        {currentImageIndex === 9 && <p>Kaï Chun Chang - Paris, FR</p>}  
+        {currentImageIndex ===10 && <p>Eemyun Kang - Milan, IT</p>}  
+        {currentImageIndex === 11 && <p>Mario Picardo - Paris, FR</p>}  
+        {currentImageIndex === 12 && <p>Lorenzo Senni - Milan, IT</p>} 
+        {currentImageIndex === 13 && <p >Giacomo Spazio - Milan, IT</p>}
+        {currentImageIndex === 14 && <p>Roberto Alfano - Modena, IT</p>}  
+        {currentImageIndex === 15 && <p>Marco Grassi - Milan, IT</p>}  
+        {currentImageIndex === 16 && <p>Lou Ros - Paris, FR</p>}  
+        {currentImageIndex === 17 && <p>Gasius - Zushi, JP</p>}  
+        {currentImageIndex === 18 && <p>Emajons - Palermo, IT</p>}  
         {currentImageIndex === 19 && <p>19</p>}  
         {currentImageIndex ===20 && <p>20</p>}   
         </h1>
