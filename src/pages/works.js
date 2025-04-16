@@ -166,7 +166,7 @@ export default function Home() {
                   
           {selectedCreative && data.ordineDeiWorks[0].works.find(p => p.id === selectedCreative)?.nome === 'Artchive' && (
         <h1 style={{ color: 'black', position: 'fixed', bottom: 45, right: 45, zIndex: 999 }}>
-           {currentImageIndex === 0 && <p >Mattia Turco - Milan, IT</p>}
+        {currentImageIndex === 0 && <p >Mattia Turco - Milan, IT</p>}
         {currentImageIndex === 1 && <p >Pedone - Grottaglie, IT</p>}
         {currentImageIndex === 2 && <p>Marion Flament - Paris, FR</p>}
         {currentImageIndex === 3 && <p >Mosa - Paris, FR </p>}

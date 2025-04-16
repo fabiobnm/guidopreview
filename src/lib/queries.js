@@ -207,7 +207,7 @@ export const GET_POSTSEducNew = gql`
 query {
     workshops{
      text{html}
-     educational{
+     educational(first: 100){
        ... on Educational{
          copertina{url}
          retro{url}
