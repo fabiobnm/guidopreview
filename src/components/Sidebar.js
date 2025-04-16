@@ -62,9 +62,20 @@ const Sidebar = () => {
       <ul className='headerDesktop' >
         {/* Guido Borso a sinistra */}
         <li style={styles.left}>
-          <Link className='vociMenuHeader' id='guidoBold' href="/" style={router.pathname === '/' ? styles.linkHome : styles.linkHome}>
-          Guido Borso
-          </Link>
+        <a
+    className="vociMenuHeader"
+    id="guidoBold"
+    href="/"
+    onClick={(e) => {
+      if (router.pathname === '/') {
+        e.preventDefault();
+        location.reload();
+      }
+    }}
+    style={styles.linkHome}
+  >
+    Guido Borso
+  </a>
         </li>
 
         {/* Works, Commissions, Educational al centro */}
