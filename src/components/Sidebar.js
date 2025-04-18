@@ -122,7 +122,13 @@ const Sidebar = () => {
       </ul>
 
       <div className="headerMobile">
-        <Link href="/" id='guidoBold' style={styles.linkHome}>Guido Borso</Link>
+        <Link href="/" id='guidoBold'
+    onClick={(e) => {
+      if (router.pathname === '/') {
+        e.preventDefault();
+        location.reload();
+      }
+    }} style={styles.linkHome}>Guido Borso</Link>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={styles.mobileButton}>
           {isMobileMenuOpen ? '-' : '+'}
         </button>
