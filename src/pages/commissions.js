@@ -78,7 +78,7 @@ export default function Home() {
     />
     <div
       className="commissionTextMobile"
-      style={{ color: 'black', margin: '25px', marginBottom: '100px' }}
+      style={{ color: 'black', margin: '25px', marginBottom: '100px' , display:'none'}}
       dangerouslySetInnerHTML={{ __html: commissions.text }}
     ></div>
   </div>
@@ -86,7 +86,7 @@ export default function Home() {
       </div>
       <div
         className="commissionTextDesktop"
-        style={{ width: '50%', color: 'black', marginLeft: '45px', marginTop: '20px' }}
+        style={{ width: '50%', color: 'black', marginLeft: '45px', marginTop: '20px', display:'none' }}
         dangerouslySetInnerHTML={{ __html: hoverText }}
       ></div>
 

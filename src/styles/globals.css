@@ -634,7 +634,7 @@ list-style-type: none;
   }
   .boxImageHome{
       display: block;
-      margin: 30vh 0% 0px;
+      margin: 30vh 5% 0px;
   }
   .imgAbout{
     color: black;
@@ -755,6 +755,8 @@ list-style-type: none;
       object-fit: cover;
       margin-right: 0px;
       padding-inline: 1rem;
+      margin-bottom: 1rem;
+
   }
 .asideHeader{
 
