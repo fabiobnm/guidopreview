@@ -82,7 +82,7 @@ export default function Home() {
               className='imgDragClass'
               style={{
               position: 'fixed',
-              marginTop: `${(index) *70}px`,
+              marginTop: `${(index) *40}px`,
               left: `${(index +1) * 15}px`,
               zIndex:(10- index), // Usa l'indice iniziale
               transition: 'z-index 0.2s ease-in-out',

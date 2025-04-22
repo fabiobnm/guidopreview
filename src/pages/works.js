@@ -103,7 +103,7 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index)}
               >
-                <img onLoad={() => handleImageLoad(image.id)}
+                <Image onLoad={() => handleImageLoad(image.id)}
                        width={200} height={200} src={image.url} alt={progetto.nome} 
                        style={{ width: '100%', objectFit: 'cover', cursor: 'pointer',
                        opacity: loadedImages[image.id] ? 1 : 0,
@@ -118,7 +118,7 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index + progetto.galleria.length)}
               >
-                <img  onLoad={() => handleImageLoad(video.id)}
+                <Image  onLoad={() => handleImageLoad(video.id)}
                         width={200} height={200} src={video.thumbnail?.url} alt={progetto.nome} 
                         style={{ width: '100%', objectFit: 'cover', cursor: 'pointer',
                         opacity: loadedImages[video.id] ? 1 : 0,
@@ -141,14 +141,33 @@ export default function Home() {
             )}
 
             
-            {currentGallery[currentImageIndex]?.url ? (
-              <img src={currentGallery[currentImageIndex]?.url} alt="Gallery item" className="carousel-image" />
-            ) : (
-              <video controls className="carousel-video">
-                <source src={currentGallery[currentImageIndex]?.fileVideo?.url} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            )}
+{currentGallery[currentImageIndex]?.url ? (
+  <img
+    src={currentGallery[currentImageIndex]?.url}
+    alt="Gallery item"
+    className="carousel-image"
+  />
+) : currentGallery[currentImageIndex]?.fileVideo?.url ? (
+  <video controls className="carousel-video">
+    <source
+      src={currentGallery[currentImageIndex]?.fileVideo?.url}
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+) : (
+  <iframe
+    width="760"
+    height="415"
+    src={`${currentGallery[currentImageIndex]?.link}?autoplay=1`}
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    style={{zIndex:99999}}
+  ></iframe>
+)}
 
             {currentGallery[currentImageIndex]?.url ? (
               <button className="nav-btn next-btn" onClick={() => navigateCarousel(1)}></button>

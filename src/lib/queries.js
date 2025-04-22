@@ -29,6 +29,7 @@ export const GET_POSTSOrdine = gql`
         id
         thumbnail{url}
         fileVideo{url}
+        link
       }
     }
   }

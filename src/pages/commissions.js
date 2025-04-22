@@ -86,7 +86,7 @@ export default function Home() {
       </div>
       <div
         className="commissionTextDesktop"
-        style={{ width: '50%', color: 'black', marginLeft: '45px', marginTop: '20px', display:'none' }}
+        style={{ width: '50%', color: 'black', marginLeft: '45px', marginTop: '20px'}}
         dangerouslySetInnerHTML={{ __html: hoverText }}
       ></div>
 

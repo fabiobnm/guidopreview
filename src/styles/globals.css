@@ -906,4 +906,11 @@ list-style-type: none;
   .imgAbout{
     width: 15vW;
   }
+
+  .imgCommission{
+    height: 75vH;
+  }
+  .imgCommission:hover{
+    height: 75.2vH;
+  }
 }
