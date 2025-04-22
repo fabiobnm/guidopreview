@@ -118,7 +118,7 @@ export default function Home() {
                     marginRight: '0px'}}
                 onClick={() => openModal(progetto.galleria, progetto.video, index + progetto.galleria.length)}
               >
-                <Image  onLoad={() => handleImageLoad(video.id)}
+                <img  onLoad={() => handleImageLoad(video.id)}
                         width={200} height={200} src={video.thumbnail?.url} alt={progetto.nome} 
                         style={{ width: '100%', objectFit: 'cover', cursor: 'pointer',
                         opacity: loadedImages[video.id] ? 1 : 0,
@@ -159,7 +159,7 @@ export default function Home() {
   <iframe
     width="760"
     height="415"
-    src={`${currentGallery[currentImageIndex]?.link}?autoplay=1`}
+    src={`${currentGallery[currentImageIndex]?.link}`}
     title="YouTube video player"
     frameBorder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
