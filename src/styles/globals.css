@@ -98,6 +98,15 @@ color: white;
   padding: 20px;
 }
 
+.digitalConstruction{
+  color: black;
+  position: relative;
+  bottom: 20px;
+  text-align: end;
+  padding-right: 45px;
+  font-size: 10px;
+}
+
 .imgWorkshop{
   height: 48vh;
     max-width: 30vw;
@@ -892,6 +901,12 @@ list-style-type: none;
     background: none;
     cursor: w-resize;
     display: block;
+  }
+
+  .digitalConstruction{
+    
+    bottom: 1rem;
+    padding-right: 1rem;
   }
   
 }
