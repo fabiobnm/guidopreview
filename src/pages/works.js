@@ -72,17 +72,29 @@ export default function Home() {
     });
   };
 
-  useEffect(() => {
-  const html = document.documentElement;
-  if (isModalOpen) {
-    html.style.overflowY = 'hidden';
-  } else {
-    html.style.overflowY = 'auto';
-  }
+useEffect(() => {
+  const body = document.body;
 
-  return () => {
-    html.style.overflowY = 'auto'; // cleanup quando il componente si smonta
-  };
+  if (isModalOpen) {
+    // Salva lo scroll attuale
+    const scrollY = window.scrollY;
+    body.style.position = 'fixed';
+    body.style.top = `-${scrollY}px`;
+    body.style.left = '0';
+    body.style.right = '0';
+    body.style.overflow = 'hidden';
+    body.style.width = '100%';
+  } else {
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    body.style.left = '';
+    body.style.right = '';
+    body.style.overflow = '';
+    body.style.width = '';
+    // Ripristina lo scroll precedente
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  }
 }, [isModalOpen]);
 
   // SWIPE HANDLERS
