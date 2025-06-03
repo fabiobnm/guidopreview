@@ -72,6 +72,19 @@ export default function Home() {
     });
   };
 
+  useEffect(() => {
+  const html = document.documentElement;
+  if (isModalOpen) {
+    html.style.overflowY = 'hidden';
+  } else {
+    html.style.overflowY = 'auto';
+  }
+
+  return () => {
+    html.style.overflowY = 'auto'; // cleanup quando il componente si smonta
+  };
+}, [isModalOpen]);
+
   // SWIPE HANDLERS
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => navigateCarousel(1),
