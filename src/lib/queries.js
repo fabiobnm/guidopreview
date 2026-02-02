@@ -63,10 +63,10 @@ export const GET_POSTSOrderComm = gql`
 
 export const GET_POSTSExtraWorks = gql`
   query ExtraWorks {
-    extraWorks {
+    extraWorks(first:100){
       id
       nome
-      gallery {
+      gallery(first:1000) {
         url
       }
     }
