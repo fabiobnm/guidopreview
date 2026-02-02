@@ -61,6 +61,17 @@ export const GET_POSTSOrderComm = gql`
 `;
 
 
+export const GET_POSTSExtraWorks = gql`
+  query ExtraWorks {
+    extraWorks {
+      id
+      nome
+      gallery {
+        url
+      }
+    }
+  }
+`;
 
 
 
